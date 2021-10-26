@@ -159,5 +159,12 @@ function choton_page()
 }
 add_action('admin_menu', 'choton_page');
 
-
+function choton_smenu(){
+$args = array(
+    'public' => true,
+    'label' => 'choton book',
+);
+register_post_type('choton book', $args);
+}
+add_action('init', 'choton_smenu');
 ?>
